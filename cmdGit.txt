@@ -1,0 +1,120 @@
+1º passsos com o Git:
+
+//No caso local:
+git config --local user.name "Seu nome aqui"
+git config --local user.email "seu@email.aqui"
+
+//No caso global:
+git config --global user.name "Seu nome aqui"
+git config --global user.email "seu@email.aqui"
+
+Lista de alguns Comandos Git:
+
+git init 												== inicializa um novo repositório;
+
+git add . 											== adiciona os arquivos atuais ao próximo commit;
+
+git status 											== verifica o status atual dos repositórios git;
+
+git commit -m "Método verificação de Login Criada" 			== cria um novo commit com uma mensagem;
+
+git push 												== envia as atualizações para a nuvem na branch atualmente ativa;
+
+git branch 											== permite listar e ver qual branch está ativa no momento; 
+
+git branch nome-da-branch 								== cria uma nova branch;
+
+git checkout nome-da-branch 						 		== permite mudar para uma nova branch;
+
+git checkout -b nome-da-nova-branch 	 					== permite mudar e criar uma nova branch;
+
+git merge branch-a-receber-merge 					 		== permite fazer o merge da branch ativa atualmente em outra branch;
+
+git pull 										 		== atualiza a branch atualmente ativa;
+
+git log 										 		== lista todos os commits de forma abreviada;
+
+git log --oneline 								 		== lista todos os commits resumidamente em uma linha;
+
+git log --pretty="format:%H" 					 		== pretty filtra a listagem conforme desejarmos;
+
+git log -p 									 		== lista todos os commits com detalhes, para sair deste modo tecle q;
+
+git init --bare 								 		== cria um repositório que só contém as alterações das commits e não propriamente os arquivos;
+
+git remote add nomeRepoRemoto endereço do repositórioRemoto 	== adiciona um repositório remoto; 
+
+git remote 											== lista todos os repositórios remotos;
+
+git remote rename nomeAntigo nomeNovo 						== altera o nome de um repositório remoto;
+
+git clone endereço do repositório nomePasta 		 		== clona um repositório local para um remoto;
+
+git push nomeRepoRemoto branch 					 		== envia os dados do repoRemoto para outro repositório; 
+
+git pull nomeRepoRemoto branch  							== recebe os dados do repoRemoto de outro repositório;
+
+git rebase nomeDaBranch 								== recebe os commits de outra branch mais o último commit da branch atual;
+
+git log --graph 										== mostra graficamente todas as linhas das branches já criadas; 
+
+git commit 											== finaliza a execução do merge na branch principal;
+
+git checkout -- nomeDoArquivo 							== desfaz adição de futuro commit;	
+
+git reset HEAD nomeDoArquivo								== desfaz a adição do arquivo para ser commitado;
+
+git revert hashDoCommit 								== reverte commit adicionado na branch, assim gerando novo commit de reversão e voltando ao último commit;
+
+git stash 											== salva temporariamente um diretório;
+
+git stash pop 											== retorna a última stash adicionada para o estado do stash selecionado e remove da lista de stash's';
+
+git stash list 										== lista todos os stashe's' em aguardo;         
+
+git stash apply indexStash 								== retona ao estado do stash selecionado;
+
+git stash drop indexStash								== remove stash da lista de stashe's';
+
+git checkout hashCommit 								== volta ao estado deste commit confirido/checado;
+
+git diff hashAntigo..hashAtual 							== mostra as diferanças entre dois commits, (..) significa *até*;
+
+git diff 												== mostra as alterações dos arquivos antes de serem adicionados para o commit; 												
+
+git tag 												== lista todas as tags existentes em certa branch;
+
+git tag -a nomeDoMarco -m "Ex: Versão alfa pronta." 			== cria uma tag/marcação contendo uma descrição por exemplo de uma commit;
+
+git push origin nomeDaTag 								== envia a tag criada para um endereço local ou remoto;
+
+===============================
+
+Exemplo do arquivo .gitignore:
+
+pasta == pastaExemplo/
+arquivo == nomeDoArquivo
+
+Assim você está bloqueando que sua commit perceba estes dados;
+
+===============================
+
+Obs:
+
++ adição de linha nova aos arquivos && - remoção de linhas antigas aos arquivos;
+
+===========================
+
+Muda de master para main o nome da branch principal:
+
+git branch -m master main
+
+===========================
+
+Efetua o push para o repositório remoto como novo branch *main*:
+
+git push -u origin main
+
+===========================
+
+Teste para depois: git checkout == ver o que acontece... 
